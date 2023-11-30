@@ -60,12 +60,12 @@ a {
 }
 
 /****** Hebergements And Populaires ***********/
-#hebergements-and-populaires {
+.hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
 }
 
-#hebergements-and-populaires section {
+.hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
@@ -145,7 +145,6 @@ p {
 }
 
 /* Navbar & Logo */
-
 .logo {
     width: 70px;
     height: auto;
@@ -189,10 +188,6 @@ p {
     margin-bottom: 30px;
 }
 
-.searchBar input {
-    padding: 20px;
-}
-
 form {
     width: 200px;
     height: 45px;
@@ -203,6 +198,7 @@ form input {
     width: 600px;
     border: 1px #F2F2F2 solid;
     font-weight: bold;
+
     font-size: medium;
     
 }
@@ -294,17 +290,9 @@ form input {
 /* Hébergements */
 
 
-.container-hotels {
-    
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-}
-
 
 .hotel-types  {
-    width: 29%;
+    width: 30%;
     padding: 5px 5px 5px 5px;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
@@ -317,14 +305,13 @@ form input {
 }
 
 .hotel-types img {
-    object-fit: cover;
     width: 100%;
     height: 120px;
     border-radius: 20px 20px 0px 0px;
 }
 
 .hebergements h1 {
-    margin-top: -5px; 
+    margin-top: -5px; /* Adjust the value as needed to move it higher */
 }
 
 .hotel-types h3,
@@ -347,25 +334,20 @@ form input {
 
 /****** Activités ***********/
 
-#activity {
+.activity {
     margin-top: 50px;
 }
 
-.container-activity {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
 .activity-card {
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
     margin: 15px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px #d9d9d9;
     overflow: hidden;
     width: 22%;
+
 }
+
 
 .activity-card img {
     width: 100%;
@@ -374,10 +356,8 @@ form input {
 }
 
 .activity-card h3 {
-    margin: 0;
-    padding: 20px;
+    margin-left: 20px;
 }
-
 /****** Footer ***********/
 
 
@@ -420,14 +400,10 @@ form input {
         margin: 0;
         padding: 0;
     }
-
-    /* Navbar & Logo */
-
+    
     header {
         width: 100%;
     }
-
-    /* Filtre */
 
     .filtre {
         display: block; 
@@ -446,23 +422,20 @@ form input {
     padding-left: 12px; 
     padding-right: 12px;
     }
-    
-    /* Hébergements */
 
-    #hebergements-and-populaires {
+
+    .hebergements-and-populaires {
         flex-direction: column;
     }
 
     .hebergements {
-        width: 100%;
+        width: 115%;
     }
 
     .populaires {
         width: 100%;
         margin-top: 50px;
     }
-
-        /* Populaires */
 
     .populaires-cards {
         display: flex;
@@ -471,7 +444,7 @@ form input {
     }
 
     .populaires-cards a {
-        width: 100%;
+        width: 30%;
     }
 
     .populaires-cards .card-title {
@@ -482,24 +455,10 @@ form input {
         font-size: 13px;
     }
 
-    /* Activités */
+     
 
 
-    .activity-card {
-        height: 100%;
-        width: 23%;
-    }
 
-    .activity-card img {
-        height: 200px;
-    }     
-
-
-    .activity-card h3 {
-        height: 70px;   
-    }
-
-    /* Footer **/
 
     .footer-text {
         padding-left: 19px;
@@ -529,12 +488,6 @@ form input {
     /* ... */
 
 
-
-    .main-container {
-        padding: 0;
-        margin: 0;
-    }
-
     html,body {
         width: 100%;
         height: 100%;
@@ -542,8 +495,6 @@ form input {
         padding: 0;
         overflow-x: hidden;
     }
-
-      /* Navbar & Logo */
 
     header {
         display: flex;
@@ -553,21 +504,20 @@ form input {
 
     .navbar {
         display: flex;
-        justify-content: space-evenly;
-        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 75px;
         border-bottom: solid 1px #F2F2F2;
+        
     }
 
 
     .navbar a {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-left: 0px;
-            padding-right: 0px;
         padding-top: 40px;
         margin-bottom: 20px; 
         padding-left: 50px;
+        
+        
     }
 
     .navbar a:hover::before {
@@ -583,18 +533,13 @@ form input {
         height: 2px; 
         background-color: #0065FC;
     }
-
-
-    /* SearchBar */
-
-
+    
     .searchBarSection {
-    margin: 10px;
-}
+        margin: -30px;
 
-.text-searchBar {
-    padding-top: 25px;
-}
+    }
+    
+
     .buttonSearch {
         display: none;
     }
@@ -604,11 +549,11 @@ form input {
     }
 
     .searchBar form {
-        width: 350px;
+        width: 320px;
     }
 
     .searchBar input {
-        padding: 20px;
+        padding: 16px;
     }
     
     .mobile-button {
@@ -625,109 +570,10 @@ form input {
       .mobile-button i {
         color: #F2F2F2; 
       }
-
-     /* Filtre */
-
-     .filtre {
-        margin: 20px;
-     }
+      
 
       .container-filtres {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: row;
       }
-
-
-
-      .searchResults {
-        margin: 10px;
-           }
-            
-            
-        /* Populaires */
-
-
-        #hebergements-and-populaires {
-            flex-direction: column-reverse;
-        }
-
-        .populaires {
-            margin: 0px;
-        }
-
-        .populaires-cards  {
-            display: flex;
-            flex-direction: column;
-        }
-
-            /* Hébergements */
-
-        .container-hotels {
-                display: grid;
-         }
-
-        .card {
-            width: 100%;
-        }
-
-        .hebergements {
-            background-color: white !important; 
-        }
-        
-        
-        .hotel-types {
-    width: 300px;
- }
-
-        .hotel-types img {
-            object-fit: cover;
-        }
-
-        .container-activity {
-            flex-direction: column;
-        }
-                
-        
-    /* Activités */
-
-    #activity {
-        padding: 15px;
-    }
-
-        .activity-card  {
-            width: 320px;
-
-        }
-
-        .activity-card img {
-            height: 140.2px;
-        }
-
-        .activity {
-            padding: 10px;
-        }
-
-        .activity-card h3 {
-
-            height: 20px;
-
-            }
-
-
-            /****** Footer ***********/
-
-            .bas-page {
-                flex-direction: column;
-            }
-
-            .bas-page li {
-                display: flex;
-                flex-direction: column;
-
-            }
-
-
-
-
-
-    }
+}
